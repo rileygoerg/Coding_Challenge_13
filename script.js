@@ -1,5 +1,5 @@
 let count = 0;
-function call(){
+function call(count){
     // Fetch not working so I am using data locally. Will update with API fetch once completed.
     const request = d3.json("data.json").then((response)=>{
         console.log(response);
@@ -18,4 +18,14 @@ function call(){
         document.getElementById("loadState").textContent = ""
     })
 }
-call()
+const nextButton = document.getElementById("nextButton");
+nextButton.addEventListener("click", function(){
+    count = (count < 21) ? ++count : 0;
+    call(count);
+})
+const backButton = document.getElementById("backButton");
+backButton.addEventListener("click", function(){
+    count = (count > 0) ? --count : 21;
+    call(count);
+})
+call(0)

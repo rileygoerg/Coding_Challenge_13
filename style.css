@@ -1,0 +1,21 @@
+h1 {
+    text-align: center;
+}
+h2 {
+    text-align: center;
+    color: firebrick;
+}
+div{
+    text-align: center;
+}
+p{
+    text-align: center;
+    font-style: italic;
+}
+button{
+    background-color:aqua;
+    text-align: center;
+}
+h4{
+    text-align: center;
+}

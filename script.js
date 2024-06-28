@@ -12,8 +12,10 @@ function call(){
         document.getElementById("itemPrice").textContent = `${data[count].price}`
     }).catch((error)=>{
         console.log("There was an error loading the data. Make sure you have a server set up to fetch the API.")
+        document.getElementById("loadState").textContent = "There was an error loading the data. Make sure you have a server set up to fetch the API."
     }).finally(()=>{
         console.log("Request loaded successfully.")
+        document.getElementById("loadState").textContent = ""
     })
 }
 call()
